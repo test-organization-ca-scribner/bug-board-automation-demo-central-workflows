@@ -10,5 +10,5 @@ on:
 jobs:
   label-communication:
     name: Label communication
-    # uses: canonical/charmed-kubeflow-workflows/.github/workflows/communication-labeller.yaml
-    uses: test-organization-ca-scribner/bug-board-automation-demo-central-workflows/.github/workflows/communication-labeller.yaml@VERSION
+    # uses: canonical/charmed-kubeflow-workflows/.github/workflows/communication-labeller.yaml@VERSION
+    uses: test-organization-ca-scribner/bug-board-automation-demo-central-workflows/.github/workflows/communication-labeller.yaml@main
