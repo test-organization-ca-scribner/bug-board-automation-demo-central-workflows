@@ -1,0 +1,14 @@
+# Note: this is a templated workflow - do not customize this
+# Source: https://github.com/canonical/charmed-kubeflow-workflows/blob/main/templates/communication-labeller-template.yaml
+# Description: Enables the communication labeller workflow in a repo
+name: Communication labeller
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  label-communication:
+    name: Label communication
+    # uses: canonical/charmed-kubeflow-workflows/.github/workflows/communication-labeller.yaml
+    uses: test-organization-ca-scribner/bug-board-automation-demo-central-workflows/.github/workflows/communication-labeller.yaml@VERSION
