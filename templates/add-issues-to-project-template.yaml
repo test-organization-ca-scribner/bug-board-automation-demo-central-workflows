@@ -1,0 +1,17 @@
+# Note: this is a templated workflow - do not customize this
+# Source: https://github.com/canonical/charmed-kubeflow-workflows/blob/main/templates/add-issues-to-project-template.yaml
+# Description: Adds issues to standard Kubeflow projects based on their labels
+name: Add issues to Kubeflow Projects (repo)
+
+on:
+  issues:
+    types:
+      - opened
+      - labeled
+
+jobs:
+  label-communication:
+    name: Label communication
+    # uses: canonical/charmed-kubeflow-workflows/.github/workflows/add-issues-to-projects.yaml@VERSION
+    uses: test-organization-ca-scribner/bug-board-automation-demo-central-workflows/.github/workflows/add-issues-to-projects.yaml@main
+    secrets: inherit

@@ -1,0 +1,18 @@
+# Reusable workflow for adding issues to Kubeflow Projects based on their label
+name: Add issues to Kubeflow Projects (main)
+
+on:
+  workflow_call:
+
+jobs:
+  add-to-bug-project:
+    name: Add issue to bug triage project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.6.1
+        with:
+          # project-url: https://github.com/orgs/canonical/projects/77
+          project-url: https://github.com/orgs/test-organization-ca-scribner/projects/3
+          github-token: ${{ secrets.PAT_FOR_ORG }}
+          labeled: bug
+          label-operator: OR
